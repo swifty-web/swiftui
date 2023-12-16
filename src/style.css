@@ -1,0 +1,87 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url('https://fonts.cdnfonts.com/css/sf-pro');
+:root {
+	/* Accent colors */
+	--accent-color-1: #ff3b30;
+	--accent-color-2: #ff9500;
+	--accent-color-3: #ffcc00;
+	
+	/* Primary color */
+	--primary-color: #007aff;
+	
+	/* Neutral colors */
+	--neutral-color-1: #ffffff;
+	--neutral-color-2: #f2f2f7;
+	--neutral-color-3: #e5e5ea;
+	--neutral-color-4: #d1d1d6;
+	--neutral-color-5: #c7c7cc;
+	--neutral-color-6: #8e8e93;
+	--neutral-color-7: #636366;
+	
+	/* TextFields */
+	--textfield-back: rgba(215, 215, 215, 0.1);
+	/* Progress */
+	--progress-back: rgba(215, 215, 215, 0.45);
+	
+	/* Secondary and tertiary colors */
+	--secondary-color: var(--accent-color-1);
+	--tertiary-color: var(--accent-color-2);
+	
+	/* Other */
+	--back-dark: #141414;
+	--border-radius: 8px;
+	--font-size: 14.5px;
+}
+body {
+	font-family: 'SF Pro', 'SF Pro Display', system-ui;
+	letter-spacing: 0.009em;
+	padding: 10px;
+}
+h1 {
+	font-weight: 700;
+	font-family: 'SF Pro Display';
+}
+body.dark-mode {
+	background: var(--back-dark);
+	color: var(--neutral-color-1);
+}
+button {
+	font-family: inherit;
+	padding: 10px 20px;
+	border-radius: var(--border-radius);
+	border: none;
+	background: var(--primary-color);
+	color: var(--neutral-color-1);
+	font-size: var(--font-size);
+	transition: 0.1s ease-in-out filter;
+}
+button:hover {
+	filter: brightness(90%);
+}
+input[type='text'], input[type='number'] {
+	background: var(--textfield-back);
+	padding: 5px 10px;
+	color: inherit;
+	font-family: inherit;
+	border-radius: var(--border-radius);
+	border: none;
+	height: 27px;
+	width: 162px;
+	transition: 0.4s ease-in-out outline, border;
+	caret-color: var(--secondary-color);
+}
+progress {
+	appearance: none;
+	height: 6px;
+}
+progress::-webkit-progress-value {
+	border-radius: 300px;
+	background: var(--neutral-color-1);
+}
+progress::-webkit-progress-bar {
+	background: var(--progress-back);
+	border-radius: 300px;
+}
+progress:not([value])::-webkit-progress-value {
+	background: yellow;
+}
